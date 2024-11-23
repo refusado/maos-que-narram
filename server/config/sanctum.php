@@ -33,6 +33,8 @@ return [
 
     'guard' => ['web'],
 
+    'guards' => [ 'sanctum' => [ 'driver' => 'sanctum', 'provider' => 'users', 'hash' => true, ], ],
+
     /*
     |--------------------------------------------------------------------------
     | Expiration Minutes

@@ -14,9 +14,9 @@ class StoryService
         $this->repository = $repository;
     }
 
-    public function getAllStories()
+    public function createStory(array $data)
     {
-        return $this->repository->all();
+        return $this->repository->create($data);
     }
 
     public function getStoryById($id)
@@ -28,10 +28,5 @@ class StoryService
         }
 
         return $story;
-    }
-
-    public function createStory(array $data)
-    {
-        return $this->repository->create($data);
     }
 }
