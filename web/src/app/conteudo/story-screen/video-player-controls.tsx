@@ -5,7 +5,7 @@ import {
   SpeakerSimpleSlash,
   Rewind,
   FastForward,
-  FrameCorners,
+  CornersOut,
 } from '@phosphor-icons/react';
 import {
   MediaPlayerInstance,
@@ -39,29 +39,29 @@ export function VideoPlayerControls({ playerRef }: PlayerControlsProps) {
       className={`flex h-fit w-fit flex-row items-center justify-center gap-4 rounded-full bg-neutral-50 p-2 lg:flex-col lg:p-4 ${!canPlay ? 'cursor-progress opacity-50 *:pointer-events-none' : ''}`}
     >
       {muted ? (
-        <ControlButton onClick={unmute}>
+        <ControlButton onClick={unmute} title="Desmutar">
           <SpeakerSimpleSlash />
         </ControlButton>
       ) : (
-        <ControlButton onClick={mute}>
+        <ControlButton onClick={mute} title="Mutar">
           <SpeakerSimpleHigh />
         </ControlButton>
       )}
-      <ControlButton onClick={enterFs}>
-        <FrameCorners />
+      <ControlButton onClick={enterFs} title="Tela cheia">
+        <CornersOut />
       </ControlButton>
-      <ControlButton onClick={rewind}>
+      <ControlButton onClick={rewind} title="Voltar">
         <Rewind />
       </ControlButton>
-      <ControlButton onClick={fastForward}>
+      <ControlButton onClick={fastForward} title="Avançar">
         <FastForward />
       </ControlButton>
       {paused ? (
-        <ControlButton onClick={play}>
+        <ControlButton onClick={play} title="Reproduzir">
           <Play />
         </ControlButton>
       ) : (
-        <ControlButton onClick={pause}>
+        <ControlButton onClick={pause} title="Pausar">
           <Pause />
         </ControlButton>
       )}
