@@ -7,10 +7,7 @@ interface ErrorMessageProps {
 export function ErrorScreen({ message }: ErrorMessageProps) {
   return (
     <>
-      <section
-        id="infos"
-        className="container px-4 py-20 sm:px-6 md:py-12 lg:px-8"
-      >
+      <section id="infos" className="container px-4 py-20 md:py-12">
         <p className="mb-2">
           <Link href="/" className="text-blue-600 hover:underline">
             Voltar

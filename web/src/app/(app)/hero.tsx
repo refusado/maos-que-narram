@@ -1,3 +1,5 @@
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
+
 export function Hero() {
   return (
     <div className="mx-auto max-w-[85rem]">
@@ -18,11 +20,10 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-white hover:bg-blue-700 focus:bg-blue-700"
               href="#destaques"
             >
-              {/* TODO: adicionar ícone de seta */}
-              Começar &gt;
+              Começar <ArrowRight className="size-6" />
             </a>
             <a
-              className="rounded-xl bg-white px-6 py-3.5 text-neutral-800 shadow-sm hover:bg-neutral-50 focus:bg-neutral-50"
+              className="rounded-xl px-6 py-3.5 text-neutral-800 shadow-sm duration-100 hover:bg-neutral-50 focus:bg-neutral-50"
               href="#"
             >
               Saiba mais
@@ -38,8 +39,6 @@ export function Hero() {
             alt="Criança no computador"
           />
           <div className="absolute inset-0 -z-[1] -mb-4 -ms-4 me-4 mt-4 size-full rounded-3xl bg-gradient-to-tr from-blue-600/60 via-white/0 to-white/0 lg:-mb-6 lg:-ms-6 lg:me-6 lg:mt-6"></div>
-
-          {/* TODO: adicionar efeito/vetor em cima da imagem */}
         </div>
       </div>
     </div>

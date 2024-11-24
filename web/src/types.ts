@@ -4,8 +4,8 @@ export interface Story {
   title: string;
   youtube_video_id: string;
   description?: string;
+  category: Category;
   duration?: number;
-  category?: string;
   questions?: Question[];
 }
 
@@ -25,5 +25,6 @@ export enum Category {
   MUSIC = 'Música',
   CLASSIC = 'Clássico',
   MODERN = 'Moderno',
+  RELIGIOUS = 'Religioso',
   OTHER = 'Outro',
 }

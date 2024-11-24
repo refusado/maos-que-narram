@@ -13,7 +13,7 @@ export function StoryScreen({ story }: StoryScreenProps) {
 
   return (
     <>
-      <section id="infos" className="container px-4 py-8 sm:px-6 lg:px-8">
+      <section id="infos" className="container px-4 py-8">
         <p className="mb-2">
           <Link href="/" className="text-blue-600 hover:underline">
             Voltar
@@ -32,17 +32,14 @@ export function StoryScreen({ story }: StoryScreenProps) {
 
       <section
         id="video"
-        className="container flex flex-col items-center gap-4 px-4 py-4 sm:px-6 md:gap-8 lg:flex-row lg:gap-10 lg:px-8"
+        className="container flex flex-col items-center gap-4 px-4 py-4 md:gap-8 lg:flex-row lg:gap-10"
       >
         <VideoPlayer videoId={youtube_video_id} />
         <VideoPlayerControls />
       </section>
 
       {questions && questions.length > 0 && (
-        <section
-          id="perguntas"
-          className="container px-4 py-8 pb-20 sm:px-6 lg:px-8"
-        >
+        <section id="perguntas" className="container px-4 py-8 pb-20">
           <h2 className="mb-2 text-2xl lg:text-3xl">
             Perguntas relacionadas à história
           </h2>
