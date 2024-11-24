@@ -6,21 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateQuestionsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('story_id');
-            $table->text('question_text'); // Texto da pergunta
+            $table->foreignId('story_id')->constrained('stories')->onDelete('cascade');
+            $table->text('question');
+            $table->json('options'); // As opções serão armazenadas como JSON
             $table->timestamps();
-
-            // Relacionamento com stories
-            $table->foreign('story_id')->references('id')->on('stories')->onDelete('cascade');
         });
     }
 

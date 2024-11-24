@@ -9,19 +9,9 @@ class Question extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'story_id',
-        'content',
+    protected $fillable = ['story_id', 'question', 'options'];
+
+    protected $casts = [
+        'options' => 'array', // Define que o campo será tratado como array
     ];
-
-    public function story()
-    {
-        return $this->belongsTo(Story::class);
-    }
-
-    public function answers()
-    {
-        return $this->hasMany(Answer::class);
-    }
 }
-
