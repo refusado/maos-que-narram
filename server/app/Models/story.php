@@ -9,7 +9,7 @@ class Story extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'category', 'description', 'video_url'];
+    protected $fillable = ['slug', 'title', 'youtube_video_id', 'description', 'category', 'duration'];
 
     public function questions()
     {
