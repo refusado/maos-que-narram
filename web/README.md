@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projeto Mãos que Narram
 
-## Getting Started
+Dado o desafio da ContCode, de solucionar um problema real do mercado desenvolvendo uma aplicação fullstack, nós desenvolvemos uma plataforma que visa estimular o aprendizado da Libras e fazer com que mais pessoas se capacitem para atuar no mercado em funções relacionadas ao tema.
 
-First, run the development server:
+Desta forma, nossa solução além de contribuir com a acessibilidade, algo que por si só já tem o poder de impulsionar o desenvolvimento do país e gerar mais inclusão no mercado de trabalho, nós também iremos lutar diretamente contra a realidade que o Brasil se encontra com a alta demanda de serviços relacionados à Língua de Brasileira de Sinais, como interprete e professores, e a falta de pessoas capacitadas para suprir esta demanda.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O Mãos que Narram é uma plataforma web que objetiva aumentar o contato com a Libras logo na infância, promovendo histórias infantis sinalizadas e pequenas atividades para aumentar o interesse e o aprendizado, como perguntas para testar o entendimento e gamificação para acompanhar o progresso de cada pessoa. Nossa solução tem uma visão de longo prazo, focada em desenvolver a habilidade na língua de sinais em uma etapa da vida das pessoas onde temos mais facilidade para aprender e desenvolver uma habilidade, que é justamente na infância – além de fazer parte da vida das pessoas logo cedo e aumentar as chances da Libras acompanhá-la por um longo período da vida.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tecnologias utilizadas:
+- Nextjs para o frontend
+- PHP com Laravel no backend
+- MySQL como banco de dados
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Acesse a pasta /web ou /server para mais detalhes
