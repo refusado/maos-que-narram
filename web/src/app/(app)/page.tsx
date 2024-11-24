@@ -1,6 +1,7 @@
 import { Filters } from '@/components/filters';
 import { Hero } from '@/components/hero';
 import { ListStories, ListItem } from '@/components/list-stories';
+
 const highlightedItems: ListItem[] = [
   {
     title: 'A Galinha Pintadinha e o Galo Carijó',
@@ -47,7 +48,7 @@ const allItems: ListItem[] = [
   },
 ];
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <section

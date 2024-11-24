@@ -27,11 +27,10 @@ export default {
         '2xl': '',
       },
     },
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-sans)', ...defaultFontFamily.sans],
-      },
+    fontFamily: {
+      sans: ['var(--font-body)', ...defaultFontFamily.sans],
+      display: ['var(--font-display)', ...defaultFontFamily.sans],
     },
   },
-  plugins: [tailwindcssAnimated],
+  plugins: [tailwindcssAnimated, preline],
 } satisfies Config;

@@ -3,7 +3,7 @@ export function Hero() {
     <div className="mx-auto max-w-[85rem]">
       <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-8 xl:gap-20">
         <div className="flex flex-col gap-4">
-          <h1 className="block text-3xl font-bold text-neutral-800 sm:text-4xl lg:text-6xl lg:leading-tight">
+          <h1 className="block text-3xl font-bold text-neutral-800 sm:text-4xl lg:text-6xl">
             Explore aqui histórias infantis{' '}
             <span className="text-blue-600">em Libras</span>
           </h1>

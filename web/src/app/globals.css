@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 * {
-  @apply scroll-smooth
+  @apply scroll-smooth;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display;
 }
