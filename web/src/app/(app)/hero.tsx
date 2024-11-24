@@ -1,4 +1,5 @@
 import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
+import Link from 'next/link';
 
 export function Hero() {
   return (
@@ -22,19 +23,18 @@ export function Hero() {
             >
               Começar <ArrowRight className="size-6" />
             </a>
-            <a
+            <Link
               className="rounded-xl px-6 py-3.5 text-neutral-800 shadow-sm duration-100 hover:bg-neutral-50 focus:bg-neutral-50"
-              href="#"
+              href="/sobre"
             >
               Saiba mais
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="relative ms-4">
           <img
             className="aspect-[1/1.25] w-full rounded-3xl object-cover object-center"
-            // TODO: procurar imagem melhor :v
             src="https://images.pexels.com/photos/17771083/pexels-photo-17771083/free-photo-of-criativo-engenhoso-inventivo-computador-portatil.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Criança no computador"
           />

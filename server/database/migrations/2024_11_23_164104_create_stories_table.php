@@ -6,20 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateStoriesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('stories', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->string('title');
-            $table->string('category');
+            $table->string('youtube_video_id');
             $table->text('description')->nullable();
-            $table->string('video_url');
-            $table->timestamps(); // created_at, updated_at
+            $table->string('category');
+            $table->integer('duration')->nullable();
+            $table->timestamps();
         });
     }
 
