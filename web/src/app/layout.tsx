@@ -1,8 +1,21 @@
-import { Open_Sans as FontSans } from 'next/font/google';
+import { ABeeZee as DisplayFont } from 'next/font/google';
+import { Lato as BodyFont } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
+import { Header } from '@/components/header';
+import PrelineScript from '@/components/preline-script';
 
-const fontSans = FontSans({ subsets: ['latin'], variable: '--font-sans' });
+const bodyFont = BodyFont({
+  variable: '--font-body',
+  weight: ['100', '300', '400', '700', '900'],
+  subsets: ['latin'],
+});
+
+const displayFont = DisplayFont({
+  variable: '--font-display',
+  weight: ['400'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,10 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt" className={`${fontSans.variable}`}>
-      <body className="min-h-screen overflow-x-hidden overflow-y-scroll bg-neutral-900 text-neutral-200 antialiased">
+    <html lang="pt" className={`${bodyFont.variable} ${displayFont.variable}`}>
+      <body className="min-h-screen overflow-x-hidden overflow-y-scroll bg-neutral-200 text-neutral-900 antialiased">
+        <Header />
         {children}
       </body>
+      <PrelineScript />
     </html>
   );
 }

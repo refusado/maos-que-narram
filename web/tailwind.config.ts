@@ -4,6 +4,7 @@ import {
   screens as defaultScreens,
 } from 'tailwindcss/defaultTheme';
 import tailwindcssAnimated from 'tailwindcss-animated';
+import preline from 'preline/plugin';
 
 export default {
   darkMode: 'class',
@@ -12,6 +13,7 @@ export default {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/hooks/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/preline/preline.js',
   ],
   theme: {
     screens: {
@@ -25,11 +27,10 @@ export default {
         '2xl': '',
       },
     },
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-sans)', ...defaultFontFamily.sans],
-      },
+    fontFamily: {
+      sans: ['var(--font-body)', ...defaultFontFamily.sans],
+      display: ['var(--font-display)', ...defaultFontFamily.sans],
     },
   },
-  plugins: [tailwindcssAnimated],
+  plugins: [tailwindcssAnimated, preline],
 } satisfies Config;
