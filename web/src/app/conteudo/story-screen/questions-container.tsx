@@ -92,7 +92,7 @@ function QuestionOption({
     <li>
       <label
         htmlFor={`question-${questionIndex}-option-${optionIndex}`}
-        className={`flex cursor-pointer items-center gap-2 rounded-md border border-neutral-300 px-3 py-2 duration-100 ${isSelected ? 'border-blue-500 bg-blue-500/10' : 'hover:bg-blue-500/5'} ${isDisabled ? 'cursor-default opacity-60' : ''}`}
+        className={`flex items-center gap-2 rounded-md border border-neutral-300 px-3 py-2 duration-100 ${isSelected ? 'border-blue-500 bg-blue-500/10' : ''} ${isDisabled ? 'cursor-default opacity-60' : 'cursor-pointer hover:bg-blue-500/5'}`}
       >
         <input
           id={`question-${questionIndex}-option-${optionIndex}`}

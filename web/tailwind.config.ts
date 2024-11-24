@@ -5,6 +5,7 @@ import {
 } from 'tailwindcss/defaultTheme';
 import tailwindcssAnimated from 'tailwindcss-animated';
 import preline from 'preline/plugin';
+import vidstack from '@vidstack/react/tailwind.cjs';
 
 export default {
   darkMode: 'class',
@@ -32,5 +33,5 @@ export default {
       display: ['var(--font-display)', ...defaultFontFamily.sans],
     },
   },
-  plugins: [tailwindcssAnimated, preline],
+  plugins: [tailwindcssAnimated, preline, vidstack],
 } satisfies Config;
