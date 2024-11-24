@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
+    "@vidstack/react": "^1.12.12",
     "next": "15.0.3",
     "preline": "^2.5.1",
     "react": "^18.3.1",

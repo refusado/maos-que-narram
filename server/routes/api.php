@@ -35,14 +35,16 @@ Route::post('/auth/login', function (Request $request) {
     ], 200);
 })->name('auth.login');
 
+
+Route::get('/list/stories', [StoryController::class, 'index'])->name('stories.list');
+
+
 // Agrupamento de rotas protegidas
 Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('stories')->group(function () {
         // Criar uma nova história
         Route::post('/', [StoryController::class, 'store'])->name('stories.create');
-
-        // Listar todas as histórias
-        Route::get('/', [StoryController::class, 'index'])->name('stories.list');
+        
 
         // Detalhar uma história específica
         Route::get('/{id}', [StoryController::class, 'show'])->name('stories.show');

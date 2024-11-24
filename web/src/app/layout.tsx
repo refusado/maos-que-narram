@@ -1,9 +1,12 @@
+import type { Metadata } from 'next';
 import { ABeeZee as DisplayFont } from 'next/font/google';
 import { Lato as BodyFont } from 'next/font/google';
-import type { Metadata } from 'next';
+
 import './globals.css';
-import { Header } from '@/components/header';
+import '@vidstack/react/player/styles/base.css';
 import PrelineScript from '@/components/preline-script';
+
+import { Header } from '@/components/header';
 
 const bodyFont = BodyFont({
   variable: '--font-body',

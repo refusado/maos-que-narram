@@ -7,6 +7,48 @@ use Exception;
 
 class StoryController extends Controller
 {
+
+
+    public function index()
+    {
+        try {
+            // Buscar todas as histórias com as perguntas relacionadas
+            $stories = Story::with('questions')->get();
+
+            // Formatar as histórias para o formato esperado pela interface
+            $formattedStories = $stories->map(function ($story) {
+                return [
+                    'id' => $story->id,
+                    'slug' => $story->slug,
+                    'title' => $story->title,
+                    'youtube_video_id' => $story->youtube_video_id,
+                    'description' => $story->description,
+                    'category' => $story->category,
+                    'duration' => $story->duration,
+                    'questions' => $story->questions->map(function ($question) {
+                        return [
+                            'story_id' => $question->story_id,
+                            'question' => $question->question,
+                            'options' => collect($question->options)->map(function ($option) {
+                                return [
+                                    'text' => $option['text'],
+                                    'is_correct' => $option['is_correct'],
+                                ];
+                            })->toArray(),
+                        ];
+                    })->toArray(),
+                ];
+            });
+
+            return response()->json(['data' => $formattedStories], 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => 'Erro ao buscar as histórias',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
     public function store(Request $request)
 {
     // Validação dos dados enviados
