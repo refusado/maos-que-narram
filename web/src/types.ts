@@ -2,7 +2,7 @@ export interface Story {
   id: string | number;
   slug: string;
   title: string;
-  video_url: string;
+  youtube_video_id: string;
   description?: string;
   duration?: number;
   category?: string;

@@ -5,8 +5,7 @@ export const MOCK_DATA: Story[] = [
     id: 1,
     slug: 'chapeuzinho-vermelho',
     title: 'Chapeuzinho Vermelho',
-    video_url:
-      'https://i.ytimg.com/an_webp/ImJ8C5gpshs/mqdefault_6s.webp?du=3000&sqp=CKL-iroG&rs=AOn4CLB4S9N5OP1XBoyjRYD_l_XaE-1b6A',
+    youtube_video_id: 'ImJ8C5gpshs',
     description: 'Uma história clássica sobre uma menina e um lobo.',
     duration: 742,
     category: Category.EDUCATIONAL,
@@ -41,8 +40,7 @@ export const MOCK_DATA: Story[] = [
     id: 2,
     slug: 'os-tres-porquinhos',
     title: 'Os Três Porquinhos',
-    video_url:
-      'https://www.youtube.com/watch?v=mgSIYg-Astg&pp=ygUYaGlzdG9yaWEgaW5mYW50aWwgbGlicmFz',
+    youtube_video_id: 'mgSIYg-Astg',
     description: 'A história de três irmãos porquinhos enfrentando um lobo.',
     duration: 703,
     category: Category.CLASSIC,
@@ -82,4 +80,11 @@ export async function fetchStory(slugToFind: string): Promise<Story | null> {
   const foundStory = MOCK_DATA.find(({ slug }) => slug == slugToFind);
 
   return foundStory ?? null;
+}
+
+export async function fetchAllStories(): Promise<Story[]> {
+  // simulando delay da API
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
+  return MOCK_DATA;
 }
