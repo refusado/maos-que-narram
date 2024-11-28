@@ -17,7 +17,7 @@ export function ListStories({ items }: { items: Story[] }) {
         {items.map(
           ({ title, category, duration, slug, youtube_video_id }, index) => (
             <Link
-              href={`/conteudo?historia=${slug ?? 'sem-slug'}`}
+              href={`/historia/${slug}`}
               key={index}
               className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border bg-neutral-100 transition duration-300 hover:shadow-lg"
               title={`Ir para a historia ${title}`}

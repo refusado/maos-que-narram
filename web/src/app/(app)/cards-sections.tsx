@@ -17,7 +17,7 @@ export function CardsSections() {
       setHighlightedItems(highlightedStories);
 
       const allStories = await fetchAllStories();
-      setAllItems(allStories);
+      setAllItems(allStories.slice(4));
     }
 
     fetchStories();

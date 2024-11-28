@@ -1,18 +1,14 @@
 import { Story } from '@/types';
 import Link from 'next/link';
-import { VideoPlayer } from './video-player';
-import { VideoPlayerControls } from './video-player-controls';
 import { QuestionsContainer } from './questions-container';
-import { useRef } from 'react';
-import { MediaPlayerInstance } from '@vidstack/react';
+import { VideoPlayerContainer } from './video';
 
 interface StoryScreenProps {
   story: Story;
 }
 
 export function StoryScreen({ story }: StoryScreenProps) {
-  const { title, description, youtube_video_id, questions, category } = story;
-  const playerRef = useRef<MediaPlayerInstance>(null);
+  const { title, description, questions, category } = story;
 
   return (
     <>
@@ -37,12 +33,7 @@ export function StoryScreen({ story }: StoryScreenProps) {
         id="video"
         className="container flex flex-col items-center gap-4 px-4 py-4 md:gap-8 lg:flex-row lg:gap-10"
       >
-        <VideoPlayer
-          title={title}
-          playerRef={playerRef}
-          videoId={youtube_video_id}
-        />
-        <VideoPlayerControls playerRef={playerRef} />
+        <VideoPlayerContainer story={story} />
       </section>
 
       {questions && questions.length > 0 && (
