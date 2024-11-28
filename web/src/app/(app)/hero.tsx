@@ -11,9 +11,8 @@ export function Hero() {
             <span className="text-blue-600">em Libras</span>
           </h1>
           <p className="mt-3 text-lg text-neutral-800">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-            aliquid molestias rerum, ad commodi sint nihil esse quasi dolor
-            fugiat neque consectetur porro.
+            O <strong>Mãos que Narram</strong> é uma plataforma divertida de
+            vídeos com histórias legais em Libras e testes de compreensão!
           </p>
 
           <div className="mt-7 grid w-full gap-4 text-center font-medium sm:inline-flex">
